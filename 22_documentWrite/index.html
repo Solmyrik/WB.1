@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // В современных браузерах максимальное количество вызова document.write 21
+      let counter = 0;
+
+      function documentWrite() {
+        try {
+          // увеличиваем counter
+          counter++;
+          document.write('<p>count: ' + counter + '</p>');
+          // рекурсивно вызываем функцию, пока нет ошибки
+          document.write(`<script>documentWrite();<\/script>`);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      documentWrite();
+    </script>
+  </body>
+</html>

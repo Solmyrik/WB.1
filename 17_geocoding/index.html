@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="17_geocoding.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        height: 100vh;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .form {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    </style>
+    <div class="main">
+      <form class="form">
+        <input type="text" placeholder="введите адрес" id="input" />
+        <select id="select">
+          <option value="0">Выберите адрес</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>
